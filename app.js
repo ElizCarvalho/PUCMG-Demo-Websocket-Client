@@ -5,9 +5,12 @@ window.onload = function(){
     var messagesList = document.getElementById("messages");
     var socketStatus = document.getElementById("status");
     var closeBtn = document.getElementById("close");
+    //var pathServerWS = "ws://echo.websocket.org"
+    var pathServerWS = "ws://localhost:9898"
+
 
     //Criar um novo Socket
-    var socket = new WebSocket("ws://echo.websocket.org");
+    var socket = new WebSocket(pathServerWS);
 
     //Funcao para tratar os erros que podem ocorrer
     socket.onerror = function(error){
